@@ -1,1 +1,1 @@
-python -m rasa_nlu.server -c config.json -e luis
+python -m rasa_nlu.server --path projects

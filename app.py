@@ -24,8 +24,8 @@ def chat():
         response = requests.get("http://localhost:5000/parse",params={"q":user_message})
         response = response.json()
         entities = response.get("entities")
-        topresponse = response["topScoringIntent"]
-        intent = topresponse.get("intent")
+        topresponse = response["intent"]
+        intent = topresponse.get("name")
         print("Intent {}, Entities {}".format(intent,entities))
         if intent == "gst-info":
             response_text = gst_info(entities)# "Sorry will get answer soon" #get_event(entities["day"],entities["time"],entities["place"])
