@@ -1,26 +1,6 @@
-﻿{
+{
   "rasa_nlu_data": {
     "common_examples": [
-      {
-        "text": "who are you?",
-        "intent": "intro",
-        "entities": []
-      },
-      {
-        "text": "what do you do?",
-        "intent": "intro",
-        "entities": []
-      },
-      {
-        "text": "what can you do for me?",
-        "intent": "intro",
-        "entities": []
-      },
-      {
-        "text": "hey",
-        "intent": "greet",
-        "entities": []
-      },
       {
         "text": "hey",
         "intent": "greet",
@@ -47,6 +27,21 @@
         "entities": []
       },
       {
+        "text": "tell me a fact",
+        "intent": "fact",
+        "entities": []
+      },
+      {
+        "text": "what's something that you know?",
+        "intent": "fact",
+        "entities": []
+      },
+      {
+        "text": "tell me something interesting",
+        "intent": "fact",
+        "entities": []
+      },
+      {
         "text": "yes",
         "intent": "affirm",
         "entities": []
@@ -59,6 +54,11 @@
       {
         "text": "yeah",
         "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "what do you know?",
+        "intent": "fact",
         "entities": []
       },
       {
@@ -87,6 +87,46 @@
         "entities": []
       },
       {
+        "text": "what's a fact your know?",
+        "intent": "fact",
+        "entities": []
+      },
+      {
+        "text": "search for restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in the west",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "west",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "central indian restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 14,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
         "text": "indeed",
         "intent": "affirm",
         "entities": []
@@ -107,154 +147,9 @@
         "entities": []
       },
       {
-        "text": "What is GST",
-        "intent": "gst-info",
-        "entities": [
-          {
-            "start": 8,
-            "end": 11,
-            "value": "GST",
-            "entity": "gst-info-value"
-          }
-        ]
-      },
-      {
-        "text": "What are the benefits of GST",
-        "intent": "gst-info",
-        "entities": [
-          {
-            "start": 13,
-            "end": 22,
-            "value": "benefits",
-            "entity": "gst-info-value"
-          }
-        ]
-      },
-      {
-        "text": "What are the benefits of GST for business",
-        "intent": "gst-info",
-        "entities": [
-          {
-            "start": 13,
-            "end": 22,
-            "value": "benefits",
-            "entity": "gst-explain-type"
-          },
-          {
-            "start": 33,
-            "end": 41,
-            "value": "business",
-            "entity": "gst-explain-value"
-          }
-        ]
-      },
-      {
-        "text": "What are the benefits of GST for government",
-        "intent": "gst-info",
-        "entities": [
-          {
-            "start": 13,
-            "end": 22,
-            "value": "benefits",
-            "entity": "gst-info-type"
-          },
-          {
-            "start": 33,
-            "end": 43,
-            "value": "government",
-            "entity": "gst-info-value"
-          }
-        ]
-      },
-      {
-        "text": "What is GST rate for grains",
-        "intent": "gst-query",
-        "entities": [
-          {
-            "start": 21,
-            "end": 27,
-            "value": "grains",
-            "entity": "gst-query-value"
-          },
-          {
-            "start": 12,
-            "end": 17,
-            "value": "rate",
-            "entity": "gst-query-type"
-          }
-        ]
-      },
-      {
-        "text": "What are goods exempt from GST",
-        "intent": "gst-query",
-        "entities": [
-          {
-            "start": 15,
-            "end": 22,
-            "value": "exempt",
-            "entity": "gst-query-value"
-          },
-          {
-            "start": 9,
-            "end": 15,
-            "value": "goods",
-            "entity": "gst-query-type"
-          }
-        ]
-      },
-      {
-        "text": "What are services exempt from GST",
-        "intent": "gst-query",
-        "entities": [
-          {
-            "start": 9,
-            "end": 18,
-            "value": "services",
-            "entity": "gst-query-value"
-          },
-          {
-            "start": 18,
-            "end": 25,
-            "value": "exempt",
-            "entity": "gst-query-type"
-          }
-        ]
-      },
-      {
-        "text": "What are Goods attracting 5% GST",
-        "intent": "gst-query",
-        "entities": [
-          {
-            "start": 9,
-            "end": 15,
-            "value": "Goods",
-            "entity": "gst-query-type"
-          },
-          {
-            "start": 26,
-            "end": 28,
-            "value": "5%",
-            "entity": "gst-query-value"
-          }
-        ]
-      },
-      {
-        "text": "What are Goods attracting 12% GST",
-        "intent": "gst-query",
-        "entities": [
-          {
-            "start": 9,
-            "end": 15,
-            "value": "Goods",
-            "entity": "gst-query-type"
-          },
-          {
-            "start": 26,
-            "end": 29,
-            "value": "12%",
-            "entity": "gst-query-value"
-          }
-        ]
+        "text": "what's something interesting?",
+        "intent": "fact",
+        "entities": []
       }
     ]
   }

@@ -15,7 +15,7 @@ def hello_world():
     return render_template('home.html')
 
 get_random_response = lambda intent:random.choice(intent_response_dict[intent])
-
+# get_fact_response = lambda intent:random.choice(fact_response_dict[intent])
 
 @app.route('/chat',methods=["POST"])
 def chat():
@@ -26,8 +26,10 @@ def chat():
         entities = response.get("entities")
         topresponse = response["intent"]
         intent = topresponse.get("name")
-        print("Intent {}, Entities {}".format(intent,entities))
-        if intent == "gst-info":
+        print("Intent: {}, Entities: {}".format(intent,entities))
+        if intent == "fact":
+            response_text = get_fact_response()
+        elif intent == "gst-info":
             response_text = gst_info(entities)# "Sorry will get answer soon" #get_event(entities["day"],entities["time"],entities["place"])
         elif intent == "gst-query":
             response_text = gst_query(entities)
